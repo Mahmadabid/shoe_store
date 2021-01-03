@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+body {
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark {
+  background-color: rgb(20, 117, 121) !important; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.color {
+  background-color: rgb(25, 65, 66) !important; 
+  color:#FFFFFF !important;
+}
+
+.top {
+  margin-top: 35px;
+  padding-bottom: 10px;
+}
+
+.darks {
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.Link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.Links {
+  margin: 0px auto;
+}
+
+.space {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.menus{
+  display: none;
+}
+
+.img {
+  width: 100%;
+}
+
+.div {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .header-edit {
+    margin-top: 3px !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 425px) {
+  .Grid {
+    margin: 20px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menus{
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .detail {
+    flex-direction: column;
+  }
+  .top {
+    margin-top: 0px;
   }
 }

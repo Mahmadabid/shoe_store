@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
+import Header from "./Components/Header";
+import { ThemeButton } from "./Context/GlobalState";
+import { Home } from './Components/Home';
+import { Routes, Route } from 'react-router-dom';
+import { NotFound } from "./Components/NotFound";
+import { Product } from "./Components/Product";
+import { ProductHome } from "./Components/ProductHome";
+import { ProductDetails } from "./Components/ProductDetails";
 
 function App() {
+
+  const islit = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeButton.Provider value={islit}>
+      <div className={`${islit[0]?'':'darks'} container`} >
+        <Header />
+          <div>
+            <Routes>
+              <Route path="*" element={<NotFound/>} />
+              <Route path="/" element={<Home />} />
+              <Route path="products" element={<Product/>}>
+              <Route path="/" element={<ProductHome />} />
+                <Route path=":productId" element={<ProductDetails />} />
+              </Route>
+            </Routes>
+          </div>
+      </div>
+    </ThemeButton.Provider>
   );
 }
 
