@@ -4,7 +4,9 @@ import { Outlet} from "react-router";
 export const Product = () => {
     return (
         <div>
-       <Outlet />
+            <h1 style={{marginLeft:'10px'}}>Products</h1> 
+            <hr/>
+            <Outlet />
         </div>
     )
 }

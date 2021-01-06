@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { ThemeButton } from "../Context/GlobalState";
+import { ThemeButton } from "../../Context/GlobalState";
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/core';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import { Link } from 'react-router-dom';
 import { MenuBox } from "./MenuBox";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,6 +31,7 @@ export default function Header() {
                     </Typography>
                     <Link to="/" className="Link hide"><Button color="inherit" className="header-edit">Home</Button></Link>
                     <Link to="products" className="Link hide"><Button color="inherit" className="header-edit">Product</Button></Link>
+                    <Link to="cart" className="Link"><Button color="inherit" className="header-edit"><ShoppingCartIcon /></Button></Link>
                     <IconButton edge="end" color="inherit" size='medium' onClick={() => { Light[1](!Light[0]) }}>
                         {Light[0] ? <Brightness4Icon /> : <Brightness7Icon />}
                     </IconButton>
