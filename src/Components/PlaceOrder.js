@@ -20,13 +20,14 @@ const useStyles = makeStyles((theme) => ({
 
 export const PlaceOrder = ({name, img, price, productId}) => {
 
-    const { placeOrder } = React.useContext(GlobalContext);
+    const { placeOrder, orders } = React.useContext(GlobalContext);
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    var val = [];
+    orders.map((order, ind) => val.unshift(ind));
     const newOrder = {
-        name, img, productId, price
+        name, img, productId, id: val[0], price
     }
-
     const handleClick = () => {
         setOpen(true);
         placeOrder(newOrder)

@@ -3,7 +3,7 @@ const AppReducer= (state, action) => {
       case 'Remove_Order':
         return {
           ...state,
-          orders: state.orders.filter(order => order.productId !== action.payload)
+          orders: state.orders.filter(order => order.id !== action.payload)
         }
       case 'Place_Order':
         return {

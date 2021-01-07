@@ -99,7 +99,7 @@
 }
 
 .centered {
-  margin-top: -5px;
+  margin-top: -3px;
   color: white;
 }
 
@@ -110,6 +110,23 @@
   left: 50%;
   width: 14px;
   height: 14px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.cart-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circled {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0%;  
+  left: 50%;
+  width: 17px;
+  height: 17px;
   background-color: red;
   border-radius: 50%;
 }

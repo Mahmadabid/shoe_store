@@ -49,7 +49,7 @@ export default function Order({ order }) {
                                     </Typography>
                                 </Grid>
                                 <Grid item>
-                                    <Button onClick={() => removeOrder(order.productId)}>
+                                    <Button onClick={() => removeOrder(order.id)}>
                                         Remove
                                     </Button>
                                 </Grid>
